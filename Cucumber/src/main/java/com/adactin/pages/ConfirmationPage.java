@@ -16,4 +16,5 @@ public class ConfirmationPage extends BaseClass {
 		this.driver=driverr;
 		PageFactory.initElements(driver, this);
 	}
+
 }
