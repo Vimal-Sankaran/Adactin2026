@@ -21,5 +21,24 @@ public class SearchPageSteps extends BaseClass {
         entityHelper = new EntityHelper();
     }
 
+    @Given("I select {string} location in Search Page")
+    public void selectLocation(String location){
+        searchPage.selectLocation(location);
+    }
+
+    @Given("I select {string} hotel in Search Page")
+    public void selectHotel(String hotel){
+        searchPage.selectHotel(hotel);
+    }
+
+
+    @Given("I enter details in Search Page using id {string}")
+    public void searchHotel(String id){
+        searchPage.selectLocation(entityHelper.getCustomerDataById(id).getLocation());
+        searchPage.selectHotel(entityHelper.getCustomerDataById(id).getHotelName());
+        searchPage.clickSearch();
+    }
+
+
 
 }
