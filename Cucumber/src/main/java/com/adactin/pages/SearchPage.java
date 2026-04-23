@@ -97,7 +97,7 @@ public class SearchPage extends BaseClass {
 			clickOnElement(submit);
 		}
 
-	public void clickReset()
+	    public void clickReset()
 	{
 		clickOnElement(reset);
 	}
