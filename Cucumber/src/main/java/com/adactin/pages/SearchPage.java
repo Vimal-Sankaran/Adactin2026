@@ -23,5 +23,8 @@ public class SearchPage extends BaseClass {
 	public void selectLocation(String locationValue) {
       selectDropDownByText(location,locationValue);
 	}
-	
+
+
+
+
 }
