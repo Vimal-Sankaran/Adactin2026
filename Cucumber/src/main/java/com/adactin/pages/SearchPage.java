@@ -10,12 +10,10 @@ public class SearchPage extends BaseClass {
 
 	public WebDriver driver;
 	
-
 	public SearchPage(WebDriver driverr) {
 		this.driver=driverr;
 		PageFactory.initElements(driver, this);
 	}
-
 
 	@FindBy(id = "location")
 	private WebElement location;

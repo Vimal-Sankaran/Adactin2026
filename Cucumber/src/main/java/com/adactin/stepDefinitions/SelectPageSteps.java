@@ -27,4 +27,8 @@ public class SelectPageSteps extends BaseClass {
 //        //selectPage.selectLocation(location);
 //    }
 
+    @Given("I validate hotel location {string} in select hotel page")
+    public void validateLocation(String location){
+        assertTrue(selectPage.getLocationName(),location,"Location validated");
+    }
 }
