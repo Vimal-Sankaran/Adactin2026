@@ -18,9 +18,75 @@ public class SelectPage extends BaseClass {
 
 	@FindBy(id = "hotel_name_0")
 	private WebElement hotelName;
+    @FindBy(id = "location_0")
+    private WebElement locationName;
+    @FindBy(id="rooms_0")
+    private WebElement rooms;
+    @FindBy(id="arr_date_0")
+    private WebElement arrivalDate;
+    @FindBy(id="dep_date_0")
+    private WebElement departureDate;
+    @FindBy(id="no_days_0")
+    private WebElement numberOfDays;
+    @FindBy(id="room_type_0")
+    private WebElement roomType;
+    @FindBy(id="price_night_0")
+    private WebElement pricePerNight;
+    @FindBy(id="total_price_0")
+    private WebElement totalPrice;
+    @FindBy(id="radiobutton_0")
+    private WebElement radioButton;
+    @FindBy(id="continue")
+    private WebElement continueButton;
+    @FindBy(id="cancel")
+    private WebElement cancel;
 
-	public String getHotelName() {
-		return hotelName.getText();
-	}
+    public String getHotelName() {
+        return hotelName.getAttribute("value");
+    }
+
+    public String getLocationName() {
+        return locationName.getAttribute("value");
+    }
+
+    public String getRoomName(){
+        return rooms.getAttribute("value");
+    }
+
+    public String getArrivalDate(){
+        return arrivalDate.getAttribute("value");
+    }
+
+    public String getDepartureDate(){
+        return departureDate.getAttribute("value");
+    }
+
+     public String getNumberOfDays(){
+         return numberOfDays.getAttribute("value");
+    }
+
+    public String getRoomType(){
+        return roomType.getAttribute("value");
+    }
+
+    public String getPrizePerNight(){
+        return pricePerNight.getAttribute("value");
+    }
+
+    public String getTotalPrice(){
+        return totalPrice.getAttribute("value");
+    }
+
+    public void selectRadioButton(){
+        clickOnElement(radioButton);
+    }
+
+    public void clickContinueButton(){
+        clickOnElement(continueButton);
+    }
+
+    public void clickCancelButton(){
+        clickOnElement(cancel);
+    }
 
 }
